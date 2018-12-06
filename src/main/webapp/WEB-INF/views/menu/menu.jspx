@@ -1,0 +1,23 @@
+<div id="menu" 
+	xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:form="http://www.springframework.org/tags/form" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<c:set var="ctx" value="${pageContext.request.contextPath }" />
+
+	<div class="breadcrumbs">
+			<ul>
+				<li><a>Hilo Configuration Tool</a></li>
+				<li><a>ApplicationName</a></li>
+				<li><a href="ServerConfig.jsp">Hilo</a></li>
+				<li><a href="Logout.jsp">Logout</a></li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+	
+</div>

@@ -1,0 +1,180 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+<jsp:output doctype-root-element="HTML"
+	doctype-system="about:legacy-compat" />
+<jsp:directive.page contentType="text/html;charset=UTF-8" />
+<jsp:directive.page pageEncoding="UTF-8" />
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width" />
+
+<spring:url value="/resources/css/bootstrap.min.css" var="bootstrap" />
+<link type="text/css" href="${bootstrap}" rel="stylesheet" />
+
+<spring:url value="/resources/css/font-awesome.css" var="font" />
+<link type="text/css" href="${font}" rel="stylesheet" />
+
+<spring:url value="/resources/css/styles.css" var="style" />
+<link type="text/css" href="${style}" rel="stylesheet" />
+
+<spring:url value="/resources/css/blue.css" var="blue" />
+<link type="text/css" href="${blue}" rel="stylesheet" />
+
+
+<spring:url value="/resources/css/charisma-app.css" var="charisma" />
+<link type="text/css" href="${charisma}" rel="stylesheet" />
+
+
+<spring:url value="/resources/css/flotgraphcss.css" var="flot" />
+<link type="text/css" href="${flot}" rel="stylesheet" />
+
+
+<spring:url value="/resources/css/fullcalendar_gebo.css" var="calender" />
+<link type="text/css" href="${calender}" rel="stylesheet" />
+
+<spring:message code="application.name" var="appName" htmlEscape="false" />
+<title><spring:message code="title" arguments="${appName}" /></title>
+
+<spring:url value="/resources/js/jquery-1.9.0.js" var="jquery" />
+<script type="text/javascript" src="${jquery}">
+<!-- // -->
+	
+</script>
+
+<spring:url value="/resources/js/jquery-ui-1.10.0.custom.min.js" var="jquerycustmin" />
+<script type="text/javascript" src="${jquerycustmin}">
+<!-- // -->
+	
+</script>
+
+<spring:url value="/resources/js/jquery_cookie_min.js" var="cookiejs" />
+<script type="text/javascript" src="${cookiejs}">
+<!-- // -->
+		
+</script>
+<spring:url value="/resources/js/bootstrap.min.js" var="bootstrapjs" />
+<script type="text/javascript" src="${bootstrapjs}">
+<!-- // -->
+	
+</script>
+
+<spring:url value="/resources/js/bootstrap.plugins.min.js" var="bootstrappluginjs" />
+<script type="text/javascript" src="${bootstrappluginjs}">
+<!-- // -->
+	
+</script>
+
+
+<spring:url value="/resources/js/theme.js" var="themejs" />
+<script type="text/javascript" src="${themejs}">
+<!-- // -->
+	
+</script>
+
+
+<spring:url value="/resources/js/admincomponent.js" var="adminComponent" />
+<script type="text/javascript" src="${adminComponent}">
+<!-- // -->
+	
+</script>
+
+
+<spring:url value="/resources/js/graph.js" var="graphjs" />
+<script type="text/javascript" src="${graphjs}">
+<!-- // -->
+	
+</script>
+
+
+<spring:url value="/resources/js/Chart.js" var="Chartjs" />
+<script type="text/javascript" src="${Chartjs}">
+<!-- // -->
+	
+</script>
+
+
+<spring:url value="/resources/js/flot/jquery.flot.js" var="jqueryflot" />
+<script type="text/javascript" src="${jqueryflot}">
+<!-- // -->
+	
+</script>
+
+<spring:url value="/resources/js/flot/jquery.flot.categories.js" var="jqueryflotcategory" />
+<script type="text/javascript" src="${jqueryflotcategory}">
+<!-- // -->
+	
+</script>
+
+
+<spring:url value="/resources/js/flot/jquery.flot.pie.js" var="jqueryflotpie" />
+<script type="text/javascript" src="${jqueryflotpie}">
+<!-- // -->
+	
+</script>
+
+
+<spring:url value="/resources/js/flot/barflotbar.js" var="barchart" />
+<script type="text/javascript" src="${barchart}">
+<!-- // -->
+	
+</script>
+
+
+<spring:url value="/resources/js/flot/pieflotbar.js" var="piechart" />
+<script type="text/javascript" src="${piechart}">
+<!-- // -->
+	
+</script>
+
+
+<spring:url value="/resources/js/userSearch/list.min.js" var="userlist" />
+<script type="text/javascript" src="${userlist}">
+<!-- // -->
+	
+</script>
+
+
+<spring:url value="/resources/js/userSearch/list.paging.min.js" var="userpagination" />
+<script type="text/javascript" src="${userpagination}">
+<!-- // -->
+	
+</script>
+
+<spring:url value="/resources/js/userSearch/gebo_dashboard.js" var="gebodashboard" />
+<script type="text/javascript" src="${gebodashboard}">
+<!-- // -->
+	
+</script>
+</head>
+
+<body>
+	<div class="page-container">
+		<tiles:insertAttribute name="header"/>
+		<div class="container">
+			<div class="row row-offcanvas row-offcanvas-left">
+				<!-- main area -->
+				<div id="loginModal" class="modal show" tabindex="-1" role="dialog"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header"><!--  --></div>
+							<div class="modal-body">
+							<tiles:insertAttribute name="body" />
+							</div>
+						<tiles:insertAttribute name="footer" />	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

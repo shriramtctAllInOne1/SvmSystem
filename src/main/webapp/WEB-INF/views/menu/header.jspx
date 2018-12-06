@@ -1,0 +1,19 @@
+<div id="topbar" xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:spring="http://www.springframework.org/tags" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<c:set var="ctx" value="${pageContext.request.contextPath }" />
+	<!-- top navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<p class="navbar-brand">
+					<img src="indiaflag.png" alt="India" height="42" width="42" />
+				</p>
+				<p class="navbar-brand">GOVERMENT OF INDIA</p>
+			</div>
+		</div>
+	</div>
+</div>
